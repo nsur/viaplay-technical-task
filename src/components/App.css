@@ -1,0 +1,54 @@
+.app {
+    padding: 40px;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.tools {
+    width: 30%;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.app > h1 {
+    margin-bottom: 40px;
+}
+
+form label {
+    display: block;
+}
+
+form input {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.content {
+    width: 70%;
+}
+
+.movies-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie {
+    width: calc(25% - 24px);
+    margin: 0 30px 30px 0;
+    cursor: pointer;
+}
+
+.movie img {
+    display: block;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.movie b {
+    display: block;
+    margin-bottom: 10px;
+}
