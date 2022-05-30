@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
+// export function to external api file
+// use const/let instead of var
+// wrap JSON.parse with try/catch
+// use a ternary operator instead of 'if'
 export function getWatchedMovies() {
 	var movies = localStorage.getItem('movies-watched');
 
@@ -13,6 +17,11 @@ export function getWatchedMovies() {
 	}
 }
 
+// export function to external api file
+// use const/let instead of var
+// wrap JSON.parse with try/catch
+// use a ternary operator instead of 'if'
+// use import from JSON file instead of large js object
 export function getAllMovies() {
 	var movies = localStorage.getItem('movies-all');
 
@@ -39,6 +48,10 @@ export function getAllMovies() {
 	}
 }
 
+// export function to external api file
+// use const/let instead of var
+// create the movie object with the 'title, description, image' props in 1 line
+// use state instead of reading from localstorage every time
 export function add(title, description, image) {
 	var movie = {};
 	movie.title = title;
@@ -53,6 +66,10 @@ export function add(title, description, image) {
 	render();
 }
 
+// export function to external api file
+// use const/let instead of var
+// create the movie object with the 'title, description, image' props in 1 line
+// use state instead of reading from localstorage every time
 export function addWatchedMovie(title, description, image) {
 	var movie = {};
 	movie.title = title;
@@ -67,6 +84,9 @@ export function addWatchedMovie(title, description, image) {
 	render();
 }
 
+// export function to external api file
+// use const/let instead of var
+// use .filter for removing movie from the array
 export function removeWatchedMovie(title) {
 	var movies = getWatchedMovies();
 
@@ -82,8 +102,11 @@ export function removeWatchedMovie(title) {
 	render();
 }
 
+// unnecessary function, use the standard approach instead of
+// import the getAllMovies and getWatchedMovies functions in the App component
 function render() {
 	ReactDOM.render(<App movies={getAllMovies()} watched={getWatchedMovies()} />, document.getElementById('root'))
 }
 
+// unnecessary function call
 render();
